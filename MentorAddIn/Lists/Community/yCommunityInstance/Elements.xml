@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Community" OnQuickLaunch="TRUE" TemplateType="100" Url="Lists/Community" Description="My List Instance">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="Title">Azure</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">SharePoint</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Exchange</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Dynamics CRM</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">PHP</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Oracle</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Cold Fusion</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Identity Management</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Java</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Operating Systems (Linux, Windows, OSX)</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Toy Operating Systems (iOS, Android, WinMo)</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+</Elements>

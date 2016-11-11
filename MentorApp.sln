@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mentor", "Mentor\Mentor.csproj", "{05DDE36A-E11F-4013-ABDD-67559E3D062E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CredentialPicker", "CredentialPicker\cs\CredentialPicker.csproj", "{DC30CE66-DAEE-4CCF-BD02-8837FE918B6F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05DDE36A-E11F-4013-ABDD-67559E3D062E}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{05DDE36A-E11F-4013-ABDD-67559E3D062E}.Debug|ARM.ActiveCfg = Debug|ARM
+		{05DDE36A-E11F-4013-ABDD-67559E3D062E}.Debug|ARM.Build.0 = Debug|ARM
+		{05DDE36A-E11F-4013-ABDD-67559E3D062E}.Debug|ARM.Deploy.0 = Debug|ARM
+		{05DDE36A-E11F-4013-ABDD-67559E3D062E}.Debug|x64.ActiveCfg = Debug|x64
+		{05DDE36A-E11F-4013-ABDD-67559E3D062E}.Debug|x64.Build.0 = Debug|x64
+		{05DDE36A-E11F-4013-ABDD-67559E3D062E}.Debug|x64.Deploy.0 = Debug|x64
+		{05DDE36A-E11F-4013-ABDD-67559E3D062E}.Debug|x86.ActiveCfg = Debug|x86
+		{05DDE36A-E11F-4013-ABDD-67559E3D062E}.Debug|x86.Build.0 = Debug|x86
+		{05DDE36A-E11F-4013-ABDD-67559E3D062E}.Debug|x86.Deploy.0 = Debug|x86
+		{05DDE36A-E11F-4013-ABDD-67559E3D062E}.Release|Any CPU.ActiveCfg = Release|x86
+		{05DDE36A-E11F-4013-ABDD-67559E3D062E}.Release|ARM.ActiveCfg = Release|ARM
+		{05DDE36A-E11F-4013-ABDD-67559E3D062E}.Release|ARM.Build.0 = Release|ARM
+		{05DDE36A-E11F-4013-ABDD-67559E3D062E}.Release|ARM.Deploy.0 = Release|ARM
+		{05DDE36A-E11F-4013-ABDD-67559E3D062E}.Release|x64.ActiveCfg = Release|x64
+		{05DDE36A-E11F-4013-ABDD-67559E3D062E}.Release|x64.Build.0 = Release|x64
+		{05DDE36A-E11F-4013-ABDD-67559E3D062E}.Release|x64.Deploy.0 = Release|x64
+		{05DDE36A-E11F-4013-ABDD-67559E3D062E}.Release|x86.ActiveCfg = Release|x86
+		{05DDE36A-E11F-4013-ABDD-67559E3D062E}.Release|x86.Build.0 = Release|x86
+		{05DDE36A-E11F-4013-ABDD-67559E3D062E}.Release|x86.Deploy.0 = Release|x86
+		{DC30CE66-DAEE-4CCF-BD02-8837FE918B6F}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{DC30CE66-DAEE-4CCF-BD02-8837FE918B6F}.Debug|ARM.ActiveCfg = Debug|ARM
+		{DC30CE66-DAEE-4CCF-BD02-8837FE918B6F}.Debug|ARM.Build.0 = Debug|ARM
+		{DC30CE66-DAEE-4CCF-BD02-8837FE918B6F}.Debug|ARM.Deploy.0 = Debug|ARM
+		{DC30CE66-DAEE-4CCF-BD02-8837FE918B6F}.Debug|x64.ActiveCfg = Debug|x64
+		{DC30CE66-DAEE-4CCF-BD02-8837FE918B6F}.Debug|x64.Build.0 = Debug|x64
+		{DC30CE66-DAEE-4CCF-BD02-8837FE918B6F}.Debug|x64.Deploy.0 = Debug|x64
+		{DC30CE66-DAEE-4CCF-BD02-8837FE918B6F}.Debug|x86.ActiveCfg = Debug|x86
+		{DC30CE66-DAEE-4CCF-BD02-8837FE918B6F}.Debug|x86.Build.0 = Debug|x86
+		{DC30CE66-DAEE-4CCF-BD02-8837FE918B6F}.Debug|x86.Deploy.0 = Debug|x86
+		{DC30CE66-DAEE-4CCF-BD02-8837FE918B6F}.Release|Any CPU.ActiveCfg = Release|x86
+		{DC30CE66-DAEE-4CCF-BD02-8837FE918B6F}.Release|ARM.ActiveCfg = Release|ARM
+		{DC30CE66-DAEE-4CCF-BD02-8837FE918B6F}.Release|ARM.Build.0 = Release|ARM
+		{DC30CE66-DAEE-4CCF-BD02-8837FE918B6F}.Release|ARM.Deploy.0 = Release|ARM
+		{DC30CE66-DAEE-4CCF-BD02-8837FE918B6F}.Release|x64.ActiveCfg = Release|x64
+		{DC30CE66-DAEE-4CCF-BD02-8837FE918B6F}.Release|x64.Build.0 = Release|x64
+		{DC30CE66-DAEE-4CCF-BD02-8837FE918B6F}.Release|x64.Deploy.0 = Release|x64
+		{DC30CE66-DAEE-4CCF-BD02-8837FE918B6F}.Release|x86.ActiveCfg = Release|x86
+		{DC30CE66-DAEE-4CCF-BD02-8837FE918B6F}.Release|x86.Build.0 = Release|x86
+		{DC30CE66-DAEE-4CCF-BD02-8837FE918B6F}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

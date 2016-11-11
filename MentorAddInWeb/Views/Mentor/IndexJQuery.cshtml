@@ -1,0 +1,227 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@section csspagehead {
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+}
+
+@section scripts {
+    <script src="~/Scripts/Mentor/App-BecomeAMentorJQuery.js"></script>
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Become a Mentor</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12" style="padding-top: 20px">&nbsp;</div>
+</div>
+<div class="row" id="divFormLoader" style="display: inline">
+    <div class="col-md-12">
+        <div class="message">
+            Loading the page and Retrieving dynamic content...
+        </div>
+        <i class="fa fa-spinner fa-2x fa-spin active"></i>
+    </div>
+</div>
+<div class="row" id="divFormExists" style="display: none">
+    <div class="col-md-10">
+        <div class="container" id="viewControl">
+            <div class="row">
+                <label for="inputTitle" class="col-md-2 control-label">Title <span id="inputTitleValidation" class="ms-accentText" title="This is a required field.">*</span></label>
+                <div class="col-md-10">
+                    <span class="help-block" id="inputTitle">&nbsp;</span>
+                </div>
+            </div>
+            <div class="row">
+                <label for="chooseCareer" class="col-md-2 control-label">Career</label>
+                <div class="col-md-10">
+                    <span id="chooseCareer" class="help-block">&nbsp;</span>
+                </div>
+            </div>
+            <div class="row">
+                <label for="inputBio" class="col-md-2 control-label">Your Bio</label>
+                <div class="col-md-10">
+                    <span class="help-block" id="inputBio">&nbsp;</span>
+                </div>
+            </div>
+            <div class="row">
+                <label for="optionCareer" class="col-md-2 control-label">Career Mentor</label>
+                <div class="col-md-10 checkbox">
+                    &nbsp;<span id="optionCareer" class="help-block"> Would like to be a Career Mentor</span>
+                </div>
+            </div>
+            <div class="row">
+                <label for="optionTechnical" class="col-md-2 control-label">Technical Mentor</label>
+                <div class="col-md-10 checkbox">
+                    &nbsp;<span id="optionTechnical" class="help-block">Would like to be a Technical Mentor</span>
+                </div>
+            </div>
+            <div class="row">
+                <label for="optionPresentation" class="col-md-2 control-label">Presentation Mentor</label>
+                <div class="col-md-10 checkbox">
+                    &nbsp;<span id="optionPresentation" class="help-block">Would like to mentor Presentation Skills</span>
+                </div>
+            </div>
+            <div class="row">
+                <label for="chooseCommunity" class="col-md-2 control-label">Community Interest</label>
+                <div class="col-md-10 checkbox">
+                    <span id="chooseCommunity" class="help-block">&nbsp;</span>
+                </div>
+            </div>
+            <div class="row">
+                <label for="inputSkillsTechnical" class="col-md-2 control-label">Technical Skills</label>
+                <div class="col-md-10">
+                    <span class="help-block" id="inputSkillsTechnical">&nbsp;</span>
+                </div>
+            </div>
+            <div class="row">
+                <label for="inputSkillsProfessional" class="col-md-2 control-label">Professional Skills</label>
+                <div class="col-md-10">
+                    <span class="help-block" id="inputSkillsProfessional">&nbsp;</span>
+                </div>
+            </div>
+            <div class="row">
+                <label for="inputComments" class="col-md-2 control-label">Comments</label>
+                <div class="col-md-10">
+                    <span class="help-block" id="inputComments">&nbsp;</span>
+                </div>
+            </div>
+            <div class="frow">
+                <label for="chooseCountry" class="col-md-2 control-label">Country</label>
+                <div class="col-md-10">
+                    <span id="chooseCountry" class="help-block">&nbsp;</span>
+                </div>
+            </div>
+            <div class="row">
+                <label for="peoplePickerDiv" class="col-md-2 control-label">Mentor</label>
+                <div id="peoplePickerDiv" class="col-md-10">&nbsp;</div>
+                <input type="hidden" id="userId" />
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="button" value="Edit Mentor Profile" onclick="editUserInfo()" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        Some cool controls over here for finding mentors and matching profiles
+    </div>
+</div>
+<div class="row" id="divFormCreated" style="display: none">
+    <div class="col-md-12">
+        <div class="message">
+            You have successfully created your profile.  Go <a href="/Home/Index" Title="here">here</a>.
+        </div>
+    </div>
+</div>
+<div class="row" id="divFormGroup" style="display: none">
+    <div class="col-md-10">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="inputTitle" class="col-md-2 control-label">Title <span id="inputTitleValidation" class="ms-accentText" title="This is a required field.">*</span></label>
+                <div class="col-md-10">
+                    <input type="text" class="form-control" id="inputTitle" placeholder="Mentor Title" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="chooseCareer" class="col-md-2 control-label">Career</label>
+                <div class="col-md-10">
+                    <select id="chooseCareer" class="form-control input-sm">
+                        <option>hello</option>
+                    </select>
+                    <span>Choose a Career or profession you would like to mentor</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputBio" class="col-md-2 control-label">Your Bio</label>
+                <div class="col-md-10">
+                    <span id="inputBioValidation" class="ms-accentText" title="This is a required field.">*</span>
+                    <textarea class="form-control" id="inputBio" rows="4"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="optionCareer" class="col-md-2 control-label">Career Mentor</label>
+                <div class="col-md-10 checkbox">
+                    <label>
+                        <input type="checkbox" name="optionCareer" id="optionCareer" value="True">
+                        Choose if you would like to be a Career Mentor
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="optionTechnical" class="col-md-2 control-label">Technical Mentor</label>
+                <div class="col-md-10 checkbox">
+                    <label>
+                        <input type="checkbox" name="optionTechnical" id="optionTechnical" value="True">
+                        Choose if you would like to be a Technical Mentor
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="optionPresentation" class="col-md-2 control-label">Presentation Mentor</label>
+                <div class="col-md-10 checkbox">
+                    <label>
+                        <input type="checkbox" name="optionPresentation" id="optionPresentation" value="True">
+                        Check this box if you wish to mentor Presentation Skills
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="chooseCommunity" class="col-md-2 control-label">Community Interest</label>
+                <div class="col-md-10">
+                    <select id="chooseCommunity" multiple class="form-control">
+                        <option>hello</option>
+                        <option>world</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputSkillsTechnical" class="col-md-2 control-label">Technical Skills</label>
+                <div class="col-md-10">
+                    <textarea class="form-control" id="inputSkillsTechnical" rows="4"></textarea>
+                    <span>List any technical skills (ex. SharePoint, CRM, PHP, MySQL, MongoDB)</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputSkillsProfessional" class="col-md-2 control-label">Professional Skills</label>
+                <div class="col-md-10">
+                    <textarea class="form-control" id="inputSkillsProfessional" rows="4"></textarea>
+                    <span>List additional professional skills</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputComments" class="col-md-2 control-label">Comments</label>
+                <div class="col-md-10">
+                    <textarea class="form-control" id="inputComments" rows="4"></textarea>
+                    <span>Enter information contact preference etc.</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="chooseCountry" class="col-md-2 control-label">Country</label>
+                <div class="col-md-10">
+                    <select id="chooseCountry" class="form-control input-sm">
+                        <option>USA</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="peoplePickerDiv" class="col-md-2 control-label">Mentor</label>
+                <div id="peoplePickerDiv" class="col-md-10">&nbsp;</div>
+                <input type="hidden" id="userId" />
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <input type="button" value="Create Mentor Profile" onclick="submitUserInfo()" />
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-2">
+        &nbsp;
+    </div>
+</div>

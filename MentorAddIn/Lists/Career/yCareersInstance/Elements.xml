@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Career" OnQuickLaunch="TRUE" TemplateType="100" Url="Lists/Career" Description="My List Instance">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="Title">Software Developer</Field>
+          <Field Name="IsDeprecated">False</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Software Engineer</Field>
+          <Field Name="IsDeprecated">False</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">DevOps</Field>
+          <Field Name="IsDeprecated">False</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Hardware Engineer</Field>
+          <Field Name="IsDeprecated">False</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Sales</Field>
+          <Field Name="IsDeprecated">False</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Manager</Field>
+          <Field Name="IsDeprecated">False</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Director</Field>
+          <Field Name="IsDeprecated">False</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Researcher</Field>
+          <Field Name="IsDeprecated">False</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Security</Field>
+          <Field Name="IsDeprecated">False</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+</Elements>

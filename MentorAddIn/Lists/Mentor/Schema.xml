@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="Mentor" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/Mentor" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+      
+      
+      
+    <ContentType ID="0x01003d4dc563111b4fa39e17d26eb04c787d" Name="ListFieldsContentType">
+        <FieldRefs>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" /><FieldRef ID="{aaaceb2e-906b-4d7a-96a0-2f077afd8c47}" Name="MentorName" /><FieldRef ID="{fea0ffd7-617c-4fea-a9b7-ef566ef87e3b}" Name="MentorBio" /><FieldRef ID="{1d5fecf3-edc4-43e7-99e9-0a4d68738fef}" Name="MentorCareer" /><FieldRef ID="{ba088fba-7962-43f2-ab6c-3252c5a559aa}" Name="MentorTechnical" /><FieldRef ID="{d2a8e433-3cc8-4815-bff4-5d9b7663ce4a}" Name="MentorPresentation" /><FieldRef ID="{9128768b-f6cc-424d-b532-5c19c29ff1d3}" Name="MentorSkillsTechnical" /><FieldRef ID="{444efdc7-1de0-476a-85e0-3ed6241e31b8}" Name="MentorSkillsProfessional" /><FieldRef ID="{b6c42499-64c6-412c-b294-a2eb960d6b4e}" Name="MentorComments" /><FieldRef ID="{22887ffe-223a-4df6-8961-c6e941ab425c}" Name="MentorLkupCareer" /><FieldRef ID="{ead6db6e-648d-4cdd-a1fc-0b1a32dbb1b7}" Name="MentorLkupCommunity" /><FieldRef ID="{bb679f66-a3fc-4514-a46a-07da247a371c}" Name="MentorLkupCountry" /></FieldRefs>
+      </ContentType><ContentTypeRef ID="0x01">
+        <Folder TargetName="Item" />
+      </ContentTypeRef><ContentTypeRef ID="0x0120" /></ContentTypes>
+    <Fields>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="$Resources:core,Title;" Required="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" MaxLength="255" /><Field Name="MentorName" ID="{aaaceb2e-906b-4d7a-96a0-2f077afd8c47}" DisplayName="MentorName" Type="User" Required="TRUE" List="UserInfo" /><Field Name="MentorBio" ID="{fea0ffd7-617c-4fea-a9b7-ef566ef87e3b}" DisplayName="MentorBio" Type="Note" /><Field Name="MentorCareer" ID="{1d5fecf3-edc4-43e7-99e9-0a4d68738fef}" DisplayName="MentorCareer" Type="Boolean" Required="TRUE" /><Field Name="MentorTechnical" ID="{ba088fba-7962-43f2-ab6c-3252c5a559aa}" DisplayName="MentorTechnical" Type="Boolean" Required="TRUE" /><Field Name="MentorPresentation" ID="{d2a8e433-3cc8-4815-bff4-5d9b7663ce4a}" DisplayName="MentorPresentation" Type="Boolean" Required="TRUE" /><Field Name="MentorSkillsTechnical" ID="{9128768b-f6cc-424d-b532-5c19c29ff1d3}" DisplayName="MentorSkillsTechnical" Type="Note" /><Field Name="MentorSkillsProfessional" ID="{444efdc7-1de0-476a-85e0-3ed6241e31b8}" DisplayName="MentorSkillsProfessional" Type="Note" /><Field Name="MentorComments" ID="{b6c42499-64c6-412c-b294-a2eb960d6b4e}" DisplayName="MentorComments" Type="Note" /><Field Name="MentorLkupCareer" ID="{22887ffe-223a-4df6-8961-c6e941ab425c}" DisplayName="MentorLkupCareer" Type="Lookup" List="Lists/Career" ShowField="Title" /><Field Name="MentorLkupCommunity" ID="{ead6db6e-648d-4cdd-a1fc-0b1a32dbb1b7}" DisplayName="MentorLkupCommunity" Type="LookupMulti" Mult="TRUE" List="Lists/Community" ShowField="Title" /><Field Name="MentorLkupCountry" ID="{bb679f66-a3fc-4514-a46a-07da247a371c}" DisplayName="MentorLkupCountry" Type="Lookup" List="Lists/Country" ShowField="Title" /></Fields>
+    <Views>
+      
+      
+    <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LinkTitleNoMenu"></FieldRef></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="Modified" Ascending="FALSE"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View><View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        <FieldRef Name="LinkTitle"></FieldRef><FieldRef Name="MentorName" /><FieldRef Name="MentorBio" /><FieldRef Name="MentorCareer" /><FieldRef Name="MentorTechnical" /><FieldRef Name="MentorPresentation" /><FieldRef Name="MentorSkillsTechnical" /><FieldRef Name="MentorSkillsProfessional" /><FieldRef Name="MentorComments" /><FieldRef Name="MentorLkupCareer" /><FieldRef Name="MentorLkupCommunity" /><FieldRef Name="MentorLkupCountry" /></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="ID"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View></Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

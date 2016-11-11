@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Country" OnQuickLaunch="TRUE" TemplateType="100" Url="Lists/Country" Description="My List Instance">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="Title">USA</Field>
+          <Field Name="SortOrder">1</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Aruba</Field>
+          <Field Name="SortOrder">2</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Jamaica</Field>
+          <Field Name="SortOrder">3</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Bermuda</Field>
+          <Field Name="SortOrder">4</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Bahamas</Field>
+          <Field Name="SortOrder">5</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+</Elements>

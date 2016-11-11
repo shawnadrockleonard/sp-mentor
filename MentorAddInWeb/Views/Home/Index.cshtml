@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    var queryStrings = Request.QueryString;
+}
+
+
+<div class="jumbotron">
+    <h2>Welcome @ViewBag.UserName!</h2>
+    <p class="lead">Mentorship is a personal developmental relationship in which a more experienced or more knowledgeable person helps to guide a less experienced or less knowledgeable person. However, true mentoring is more than just answering occasional questions or providing ad hoc help. It is about an ongoing relationship of learning, dialog, and challenge. </p>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Become a Mentor</h2>
+        <p> stuff here to become a member</p>
+        <p><a class="btn btn-default" href="/Mentor/?@queryStrings">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Find a Mentee</h2>
+        <p> stuff here to find a mentee</p>
+        <p><a class="btn btn-default" href="/Mentor/Find/?@queryStrings">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Become a Mentee</h2>
+        <p>stuff here to become  amentee.</p>
+        <p><a class="btn btn-default" href="/Mentee/?@queryStrings">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Find a Mentor</h2>
+        <p>stuff here to find a mentor.</p>
+        <p><a class="btn btn-default" href="/Mentee/Find/?@queryStrings">Learn more &raquo;</a></p>
+    </div>
+</div>

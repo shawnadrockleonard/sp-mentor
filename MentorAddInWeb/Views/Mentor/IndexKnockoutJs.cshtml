@@ -1,0 +1,307 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@section scripts {
+    <script type="text/javascript" src="~/Content/js/vendor/knockout/knockout.js"></script>
+    <script type="text/javascript" src="~/Content/js/vendor/knockout/knockout.validation.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/vendor/knockout/knockout.mapping-latest.js"></script>
+    <script src="~/Content/js/Mentor/MentorKnockoutModel.js"></script>
+    <script src="~/Content/js/Mentor/MentorContextModel.js"></script>
+    <script src="~/Content/js/Mentor/MentorContextViewModel.js" defer></script>
+}
+
+<div class="container-fluid height-full">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Become a Mentor</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12" style="padding-top: 20px">&nbsp;</div>
+    </div>
+    <div class="row" id="divFormLoader" data-bind="visible: loading">
+        <div class="col-md-12">
+            <div class="message">
+                Loading the page and Retrieving dynamic content...
+            </div>
+            <i class="fa fa-spinner fa-2x fa-spin active"></i>
+        </div>
+    </div>
+    <div class="row" id="divFormCreated" data-bind="visible: created">
+        <div class="col-md-12">
+            <div class="message">
+                You have successfully created your profile.  Go <a href="/Mentor/?@Request.QueryString" Title="here">here</a>.
+            </div>
+        </div>
+    </div>
+    <div id="divNotifGroup" class="row" data-bind="visible: showNotification">
+        <!-- Notification Area -->
+        <div id="divNotification" class="col-sm-12">
+            <div id="prcAjax" class="spinner" data-bind="visible: updating"><span class="spinner-text">Processing request....</span> <i class="fa fa-spinner fa-2x fa-spin"></i></div>
+            <div class="alert" data-bind="css: notificationClass">
+                <span data-bind="html: notificationMessage"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="divFormExists" data-bind="visible: mentorExists">
+        <div class="col-sm-1">&nbsp;</div>
+        <div class="col-md-8" data-bind="with: mentor">
+            <div class="container-fluid" id="viewControl">
+                <input type="hidden" id="userId" data-bind="value: mentorUserId" />
+                <div class="row">
+                    <label for="inputTitle" class="col-md-2 control-label">Title</label>
+                    <div class="col-md-10">
+                        <span class="help-block" id="inputTitle" data-bind="html: mentorTitle">&nbsp;</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="chooseCareer" class="col-md-2 control-label">Career</label>
+                    <div class="col-md-10">
+                        <span id="chooseCareer" class="help-block" data-bind="html: mentorCareerText">&nbsp;</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="inputBio" class="col-md-2 control-label">Your Bio</label>
+                    <div class="col-md-10">
+                        <span class="help-block" id="inputBio" data-bind="html: mentorBio">&nbsp;</span>
+                    </div>
+                </div>
+                <div class="row" data-bind="visible: optionCareer">
+                    <label for="optionCareer" class="col-md-2 control-label">Career Mentor</label>
+                    <div class="col-md-10">
+                        Would like to be a Career Mentor
+                    </div>
+                </div>
+                <div class="row" data-bind="visible: optionTechnical">
+                    <label for="optionTechnical" class="col-md-2 control-label">Technical Mentor</label>
+                    <div class="col-md-10">
+                        Would like to be a Technical Mentor
+                    </div>
+                </div>
+                <div class="row" data-bind="visible: optionPresentation">
+                    <label for="optionPresentation" class="col-md-2 control-label">Presentation Mentor</label>
+                    <div class="col-md-10">
+                        Would like to mentor Presentation Skills
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="chooseCommunity" class="col-md-2 control-label">Community Interest</label>
+                    <div class="col-md-10">
+                        <span id="chooseCommunity" class="help-block" data-bind="html: mentorCommunityText">&nbsp;</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="inputSkillsTechnical" class="col-md-2 control-label">Technical Skills</label>
+                    <div class="col-md-10">
+                        <span class="help-block" id="inputSkillsTechnical" data-bind="html: mentorSkillsTechnical">&nbsp;</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="inputSkillsProfessional" class="col-md-2 control-label">Professional Skills</label>
+                    <div class="col-md-10">
+                        <span class="help-block" id="inputSkillsProfessional" data-bind="html: mentorSkillsProfessional">&nbsp;</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="inputComments" class="col-md-2 control-label">Comments</label>
+                    <div class="col-md-10">
+                        <span class="help-block" id="inputComments" data-bind="html: mentorComments">&nbsp;</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="chooseCountry" class="col-md-2 control-label">Country</label>
+                    <div class="col-md-10">
+                        <span id="chooseCountry" class="help-block" data-bind="html: mentorCountryText"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="peoplePickerDiv" class="col-md-2 control-label">Mentor</label>
+                    <div id="peoplePickerDiv" class="col-md-10" data-bind="html: mentorName"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="button" value="Edit Mentor Profile" data-bind="cick: $root.editUserInfo" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <form class="form-horizontal" id="editMentorProfile">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            Search profiles and assert a relationships
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <input type="text" id="searchMentors" data-bind="value: searchMentorName" />
+                        </div>
+                        <div class="col-xs-6">
+                            <input type="button" id="buttonSearch" value="Search" data-bind="click: searchUserRelationships" />
+                        </div>
+                    </div>
+                    <div class="row" id="divSearchLoader" data-bind="visible: mentorSearchModifying">
+                        <div class="col-md-12">
+                            <div class="message">
+                                Modifying relationships...
+                            </div>
+                            <i class="fa fa-spinner fa-2x fa-spin active"></i>
+                        </div>
+                    </div>
+                    <div class="row" id="divSearchLoader" data-bind="visible: mentorSearchLoading">
+                        <div class="col-md-12">
+                            <div class="message">
+                                searching mentor profiles...
+                            </div>
+                            <i class="fa fa-spinner fa-2x fa-spin active"></i>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <ul data-bind="foreach: mentorSearchCollection">
+                                <li>
+                                    Name: <span data-bind="text: DisplayName"> </span>
+                                    <a href="#" data-bind="click: $parent.addUserRelationships">Add</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12" data-bind="visible: mentorCollectionExists()">
+                            You currently have a relationship with:
+                        </div>
+                        <div class="col-xs-12" data-bind="visible: !mentorCollectionExists()">
+                            You are not currently in a mentor relationship.
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <ul data-bind="foreach: mentorCollection">
+                                <li>
+                                    Name: <span data-bind="text: DisplayName"> </span>
+                                    Effective Date: <span data-bind="text: EstablishedDate"> </span>
+                                    <a href="#" data-bind="click: $parent.removeUserRelationships">Remove</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row" id="divFormGroup" data-bind="with: mentor, visible: showForm">
+        <div class="col-md-10">
+            <form class="form-horizontal" id="editMentorProfile">
+                <div class="form-group">
+                    <label for="inputTitle" class="col-md-2 control-label">Title <span id="inputTitleValidation" class="ms-accentText" title="This is a required field.">*</span></label>
+                    <div class="col-md-10" data-bind="css: { 'has-error': !mentorTitle.isValid() }">
+                        <input type="text" class="form-control" id="inputTitle" placeholder="Mentor Title" data-bind="value: mentorTitle, valueUpdate: 'afterkeydown'" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="chooseCareer" class="col-md-2 control-label">Career</label>
+                    <div class="col-md-10">
+                        <select id="chooseCareer" class="form-control input-sm" data-bind="options: mentorCareerAvailable, optionsText: 'Text', value: mentorCareer">
+                            <option>hello</option>
+                        </select>
+                        <span>Choose a Career or profession you would like to mentor</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputBio" class="col-md-2 control-label">Your Bio</label>
+                    <div class="col-md-10" data-bind="css: { 'has-error': !mentorBio.isValid() }">
+                        <span id="inputBioValidation" class="ms-accentText" title="This is a required field.">*</span>
+                        <textarea class="form-control" id="inputBio" cols="25" rows="4" data-bind="value: mentorBio, valueUpdate: 'afterkeydown'"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="optionCareer" class="col-md-2 control-label">Career Mentor</label>
+                    <div class="col-md-10 checkbox">
+                        <label>
+                            <input type="checkbox" name="optionCareer" id="optionCareer" value="True" data-bind="checked: optionCareer">
+                            Choose if you would like to be a Career Mentor
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="optionTechnical" class="col-md-2 control-label">Technical Mentor</label>
+                    <div class="col-md-10 checkbox">
+                        <label>
+                            <input type="checkbox" name="optionTechnical" id="optionTechnical" value="True" data-bind="checked: optionTechnical">
+                            Choose if you would like to be a Technical Mentor
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="optionPresentation" class="col-md-2 control-label">Presentation Mentor</label>
+                    <div class="col-md-10 checkbox">
+                        <label>
+                            <input type="checkbox" name="optionPresentation" id="optionPresentation" value="True" data-bind="checked: optionPresentation">
+                            Check this box if you wish to mentor Presentation Skills
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="chooseCommunity" class="col-md-2 control-label">Community Interest</label>
+                    <div class="col-md-10">
+                        <select id="chooseCommunity" size="5" multiple class="form-control" data-bind="options: mentorCommunityAvailable, optionsText: 'Text', selectedOptions: mentorCommunity">
+                            <option>hello</option>
+                            <option>world</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputSkillsTechnical" class="col-md-2 control-label">Technical Skills</label>
+                    <div class="col-md-10">
+                        <textarea class="form-control" id="inputSkillsTechnical" rows="4" data-bind="value: mentorSkillsTechnical"></textarea>
+                        <span>List any technical skills (ex. SharePoint, CRM, PHP, MySQL, MongoDB)</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputSkillsProfessional" class="col-md-2 control-label">Professional Skills</label>
+                    <div class="col-md-10">
+                        <textarea class="form-control" id="inputSkillsProfessional" rows="4" data-bind="value: mentorSkillsProfessional"></textarea>
+                        <span>List additional professional skills</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputComments" class="col-md-2 control-label">Comments</label>
+                    <div class="col-md-10">
+                        <textarea class="form-control" id="inputComments" rows="4" data-bind="value: mentorComments"></textarea>
+                        <span>Enter information contact preference etc.</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="chooseCountry" class="col-md-2 control-label">Country</label>
+                    <div class="col-md-10">
+                        <select id="chooseCountry" class="form-control input-sm" data-bind="options: mentorCountryAvailable, optionsText: 'Text', value: mentorCountry">
+                            <option>USA</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="peoplePickerDiv" class="col-md-2 control-label">Mentor</label>
+                    <div id="peoplePickerDiv" class="col-md-10" data-bind="html: mentorName">&nbsp;</div>
+                    <input type="hidden" id="userId" data-bind="value: mentorUserId" />
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <input type="button" value="Create Mentor Profile" data-bind="click: $parent.submitUserInfo, visible: $root.showButton" />
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-2">
+            &nbsp;
+        </div>
+    </div>
+</div>

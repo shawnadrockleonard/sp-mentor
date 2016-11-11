@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="1dabb5ff-c243-43e9-a5d0-fc068df7e5bd" solutionId="1dabb5ff-c243-43e9-a5d0-fc068df7e5bd" resetWebServer="false" sharePointProductVersion="16.0" name="MentorAddIn" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="9ca9ec50-6736-4915-9370-21a588cf6f07" />
+    <featureReference itemId="dc4e73fa-5dcc-436d-a7da-e3acffd5c773" />
+    <featureReference itemId="8a285896-bd5a-4e23-ae82-7d6d9e3c4fab" />
+    <featureReference itemId="94fa7b96-9dac-4265-94bb-3f36a378b09e" />
+    <featureReference itemId="90d7be9a-9074-4df7-9a83-99a0d7820587" />
+  </features>
+</package>

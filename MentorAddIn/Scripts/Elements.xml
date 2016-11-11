@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Scripts">
+    <File Path="Scripts\knockout-3.4.0.js" Url="Scripts/knockout-3.4.0.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\knockout-3.4.0.debug.js" Url="Scripts/knockout-3.4.0.debug.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\knockout.validation.min.js.map" Url="Scripts/knockout.validation.min.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\knockout.validation.min.js" Url="Scripts/knockout.validation.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\knockout.validation.js" Url="Scripts/knockout.validation.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-1.12.0.min.map" Url="Scripts/jquery-1.12.0.min.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-1.12.0.min.js" Url="Scripts/jquery-1.12.0.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-1.12.0.js" Url="Scripts/jquery-1.12.0.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-1.12.0.intellisense.js" Url="Scripts/jquery-1.12.0.intellisense.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\bootstrap.min.js" Url="Scripts/bootstrap.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\bootstrap.js" Url="Scripts/bootstrap.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\_references.js" Url="Scripts/_references.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App-BecomeAMentor.js" Url="Scripts/App-BecomeAMentor.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App.js" Url="Scripts/App.js" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

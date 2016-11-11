@@ -1,0 +1,81 @@
+﻿<Page
+    x:Class="Mentor.Views.ProfilePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mentor"
+	xmlns:ctl="using:Mentor.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <CommandBar x:Name="topbar" VerticalAlignment="Top" HorizontalContentAlignment="Stretch">
+            <AppBarButton Icon="Save" Label="Save"/>
+            <AppBarSeparator/>
+            <AppBarButton Icon="Mail" Label="Email"/>
+            <AppBarButton Icon="AddFriend" Label="Create Relationship"/>                                
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Icon="Emoji" Label="Praise"/>
+                <AppBarButton Icon="View" Label="Dr. Whom"/>                
+            </CommandBar.SecondaryCommands>
+            <CommandBar.Content>
+                <ctl:PageHeader>
+                    <ctl:PageHeader.HeaderContent>
+                        <TextBlock Text="Profile" Style="{ThemeResource PageTitleTextBlockStyle}" TextWrapping="NoWrap"/>
+                    </ctl:PageHeader.HeaderContent>
+                </ctl:PageHeader>
+            </CommandBar.Content>
+        </CommandBar>
+
+        <Grid Grid.Row="1" EntranceNavigationTransitionInfo.IsTargetElement="True">
+            <ScrollViewer>
+				<StackPanel Orientation="Vertical">
+					<TextBlock Text="I am interested in..."></TextBlock>
+                    <StackPanel Orientation="Horizontal">
+						<ToggleSwitch x:Name="menteeToggle" Header="Getting a Mentor" OnContent="Interested in being mentored on: " OffContent="Not Interested" Toggled="menteeToggle_Toggled" ></ToggleSwitch>
+						<StackPanel x:Name="menteeAreasPanel" Orientation="Horizontal">
+							<ToggleButton x:Name="careerMenteeToggle" Content="Careers" ></ToggleButton>
+							<ToggleButton x:Name="technicalMenteeToggle" Content="Technology" ></ToggleButton>
+							<ToggleButton x:Name="presentationMenteeToggle" Content="Presenting"></ToggleButton>
+						</StackPanel>
+                    </StackPanel>
+                    <StackPanel>
+                    <ToggleSwitch x:Name="mentorToggle" Header="Being a Mentor" OnContent="Interested in mentoring on: " OffContent="Not Interested" Toggled="mentorToggle_Toggled"></ToggleSwitch>
+						<StackPanel x:Name="mentorAreasPanel" Orientation="Horizontal">
+							<ToggleButton x:Name="careerMentorToggle" Content="Careers" ></ToggleButton>
+							<ToggleButton x:Name="technicalMentorToggle" Content="Technology" ></ToggleButton>
+							<ToggleButton x:Name="presentationMentorToggle" Content="Presenting"></ToggleButton>
+						</StackPanel>
+                    </StackPanel>
+                    <ComboBox x:Name="careerCombo" Header="Career" ItemsSource="{x:Bind Careers}" DisplayMemberPath="CareerName"></ComboBox>
+                    <RichEditBox x:Name="bioEditor" Header="Brief Bio" Height="200"></RichEditBox>
+                    <ListView x:Name="communityMembershipList"					
+						ItemsSource="{x:Bind Communities}"
+						Header="Community Interests"
+						IsItemClickEnabled="False"
+						IsSwipeEnabled="False"
+						CanDragItems="False"
+						SelectionMode="Multiple">
+                    </ListView>
+                    <RichEditBox x:Name="technicalSkillsEditor" Header="Technical Skills" Height="200"></RichEditBox>
+					<RichEditBox x:Name="professionalSkillsEditor" Header="Professional Skills" Height="200"></RichEditBox>
+					<RichEditBox x:Name="commentsSkillsEditor" Header="Comments" Height="200"></RichEditBox>
+					<ComboBox x:Name="countryCombo" Header="Country" ItemsSource="{x:Bind Countries}" DisplayMemberPath="CountryName"></ComboBox>
+					<ListView x:Name="attachmentsList"						
+						Header="Attachments"
+						IsItemClickEnabled="False"
+						IsSwipeEnabled="False"
+						CanDragItems="False"
+						SelectionMode="Multiple">
+					</ListView>
+					<Button x:Name="attchmentSelectButton" Content="Browse Files..." Margin="0,10,10,0" Click="attchmentSelectButton_Click"/>
+				</StackPanel>
+            </ScrollViewer>
+        </Grid>
+
+    </Grid>
+</Page>

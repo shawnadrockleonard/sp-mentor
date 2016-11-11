@@ -1,0 +1,40 @@
+﻿@using MentorAddInWeb.Common
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>@ViewBag.Title - Mentor Application v2.0</title>
+    <link rel="stylesheet" href="~/Content/js/vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/js/vendor/font-awesome/css/font-awesome.min.css" />
+    <link rel="Stylesheet" type="text/css" href="//kendo.cdn.telerik.com/2016.1.112/styles/kendo.common.min.css" />
+    <link rel="Stylesheet" type="text/css" href="//kendo.cdn.telerik.com/2016.1.112/styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="~/Content/css/Site.min.css" />
+    @RenderSection("csspagehead", required: false)
+    <script type="text/javascript" src="~/Content/js/vendor/modernizer/modernizr.js"></script>
+    <script type="text/javascript" src="~/Content/js/vendor/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/vendor/jquery/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//kendo.cdn.telerik.com/2016.1.112/js/kendo.all.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/vendor_static/MicrosoftAjax.js"></script>
+    <script type="text/javascript" src="~/Content/js/sp-context.js"></script>
+    <script type="text/javascript" src="~/Content/js/App.js" defer></script>
+    <script type="text/javascript">
+        var appInsights = window.appInsights || function (config) {
+            function r(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } } var t = { config: config }, u = document, e = window, o = "script", s = u.createElement(o), i, f; for (s.src = config.url || "//az416426.vo.msecnd.net/scripts/a/ai.0.js", u.getElementsByTagName(o)[0].parentNode.appendChild(s), t.cookie = u.cookie, t.queue = [], i = ["Event", "Exception", "Metric", "PageView", "Trace"]; i.length;) r("track" + i.pop()); return r("setAuthenticatedUserContext"), r("clearAuthenticatedUserContext"), config.disableExceptionTracking || (i = "onerror", r("_" + i), f = e[i], e[i] = function (config, r, u, e, o) { var s = f && f(config, r, u, e, o); return s !== !0 && t["_" + i](config, r, u, e, o), s }), t
+        }({
+            instrumentationKey: "@ConfigSettings.TelemetryAppKey"
+        });
+
+        window.appInsights = appInsights;
+        appInsights.trackPageView();
+    </script>
+</head>
+<body style="display: none">
+    <div id="divSPChrome"></div>
+    <div class="body-content">
+        @RenderBody()
+    </div>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

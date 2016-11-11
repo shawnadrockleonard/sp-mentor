@@ -1,0 +1,19 @@
+{
+  "name": "asp.net",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "3.3.6",
+    "font-awesome": "4.7.0",
+    "jquery": "1.12.3",
+    "moment": "2.13.0",
+    "jquery.validation": "1.15.1",
+    "knockout-validation": "2.0.3",
+    "knockout": "3.4.0",
+    "knockout-mapping": "2.4.1",
+    "Microsoft.jQuery.Unobtrusive.Validation": "3.2.3",
+    "Microsoft.jQuery.Unobtrusive.Ajax": "3.2.3",
+    "modernizer": "2.8.2",
+    "respond": "1.4.2",
+    "knockout-kendo": "0.9.7"
+  }
+}

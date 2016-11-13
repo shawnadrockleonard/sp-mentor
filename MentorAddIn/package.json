@@ -1,0 +1,31 @@
+{
+  "version": "1.0.0",
+  "name": "asp.net",
+  "private": true,
+  "scripts": {
+    "start": "npm install && bower install",
+    "postinstall": "typings install && npm run tsc",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "typings": "typings"
+  },
+  "devDependencies": {
+    "@types/knockout": "3.4.36",
+    "@types/knockout.validation": "0.0.32",
+    "@types/jquery": "2.0.34",
+    "@types/microsoft-ajax": "0.0.31",
+    "@types/sharepoint": "2013.0.31",
+    "typescript": "2.0.8",
+    "tslint": "3.15.1",
+    "typings": "2.0.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-typescript": "3.1.2",
+    "gulp-uglify": "^2.0.0",
+    "run-sequence": "\"1.2.2\"xz"
+  }
+}

@@ -1,14 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <Module Name="Content">
-    <File Path="Content\App.css" Url="Content/App.css" ReplaceContent="TRUE" />
-    <File Path="Content\bootstrap-theme.css" Url="Content/bootstrap-theme.css" ReplaceContent="TRUE" />
-    <File Path="Content\bootstrap-theme.css.map" Url="Content/bootstrap-theme.css.map" ReplaceContent="TRUE" />
-    <File Path="Content\bootstrap-theme.min.css" Url="Content/bootstrap-theme.min.css" ReplaceContent="TRUE" />
-    <File Path="Content\bootstrap.css" Url="Content/bootstrap.css" ReplaceContent="TRUE" />
-    <File Path="Content\bootstrap.css.map" Url="Content/bootstrap.css.map" ReplaceContent="TRUE" />
-    <File Path="Content\bootstrap.min.css" Url="Content/bootstrap.min.css" ReplaceContent="TRUE" />
-    <File Path="Content\bootstrap.min.css.map" Url="Content/bootstrap.min.css.map" ReplaceContent="TRUE" />
-    <File Path="Content\bootstrap-theme.min.css.map" Url="Content/bootstrap-theme.min.css.map" ReplaceContent="TRUE" />
+    <File Path="Content\css\App.css" Url="Content/css/App.css" ReplaceContent="TRUE" />
+    <File Path="Content\images\AppIcon.png" Url="Content/images/AppIcon.png" ReplaceContent="TRUE" />
+    <File Path="Content\images\SearchMentee.jpg" Url="Content/images/SearchMentee.jpg" ReplaceContent="TRUE" />
+    <File Path="Content\images\SearchMentor.jpg" Url="Content/images/SearchMentor.jpg" ReplaceContent="TRUE" />
+    <File Path="Content\images\becomementor.jpg" Url="Content/images/becomementor.jpg" ReplaceContent="TRUE" />
+    <File Path="Content\images\becomeamentee.jpg" Url="Content/images/becomeamentee.jpg" ReplaceContent="TRUE" />
+    <File Path="Content\images\Createrelationship.jpg" Url="Content/images/Createrelationship.jpg" ReplaceContent="TRUE" />
+    <File Path="Content\js\mentor\App-BecomeAMentor.js" Url="Content/js/mentor/App-BecomeAMentor.js" ReplaceContent="TRUE" />
+    <File Path="Content\js\App.js" Url="Content/js/App.js" ReplaceContent="TRUE" />
+    <File Path="Content\js\vendor\bootstrap\fonts\glyphicons-halflings-regular.eot" Url="Content/js/vendor/bootstrap/fonts/glyphicons-halflings-regular.eot" ReplaceContent="TRUE" />
+    <File Path="Content\js\vendor\bootstrap\fonts\glyphicons-halflings-regular.svg" Url="Content/js/vendor/bootstrap/fonts/glyphicons-halflings-regular.svg" ReplaceContent="TRUE" />
+    <File Path="Content\js\vendor\bootstrap\fonts\glyphicons-halflings-regular.ttf" Url="Content/js/vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf" ReplaceContent="TRUE" />
+    <File Path="Content\js\vendor\bootstrap\fonts\glyphicons-halflings-regular.woff" Url="Content/js/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff" ReplaceContent="TRUE" />
+    <File Path="Content\js\vendor\bootstrap\fonts\glyphicons-halflings-regular.woff2" Url="Content/js/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff2" ReplaceContent="TRUE" />
+    <File Path="Content\js\vendor\bootstrap\js\bootstrap.min.js" Url="Content/js/vendor/bootstrap/js/bootstrap.min.js" ReplaceContent="TRUE" />
+    <File Path="Content\js\vendor\font-awesome\fonts\fontawesome-webfont.eot" Url="Content/js/vendor/font-awesome/fonts/fontawesome-webfont.eot" ReplaceContent="TRUE" />
+    <File Path="Content\js\vendor\font-awesome\fonts\fontawesome-webfont.svg" Url="Content/js/vendor/font-awesome/fonts/fontawesome-webfont.svg" ReplaceContent="TRUE" />
+    <File Path="Content\js\vendor\font-awesome\fonts\fontawesome-webfont.ttf" Url="Content/js/vendor/font-awesome/fonts/fontawesome-webfont.ttf" ReplaceContent="TRUE" />
+    <File Path="Content\js\vendor\font-awesome\fonts\fontawesome-webfont.woff" Url="Content/js/vendor/font-awesome/fonts/fontawesome-webfont.woff" ReplaceContent="TRUE" />
+    <File Path="Content\js\vendor\font-awesome\fonts\fontawesome-webfont.woff2" Url="Content/js/vendor/font-awesome/fonts/fontawesome-webfont.woff2" ReplaceContent="TRUE" />
+    <File Path="Content\js\vendor\font-awesome\fonts\FontAwesome.otf" Url="Content/js/vendor/font-awesome/fonts/FontAwesome.otf" ReplaceContent="TRUE" />
+    <File Path="Content\js\vendor\jquery\jquery.min.js" Url="Content/js/vendor/jquery/jquery.min.js" ReplaceContent="TRUE" />
+    <File Path="Content\js\vendor\knockout\knockout.js" Url="Content/js/vendor/knockout/knockout.js" ReplaceContent="TRUE" />
+    <File Path="Content\js\vendor\font-awesome\css\font-awesome.min.css" Url="Content/js/vendor/font-awesome/css/font-awesome.min.css" ReplaceContent="TRUE" />
+    <File Path="Content\js\vendor\knockout\knockout.validation.min.js" Url="Content/js/vendor/knockout/knockout.validation.min.js" ReplaceContent="TRUE" />
+    <File Path="Content\js\vendor\bootstrap\css\bootstrap.min.css" Url="Content/js/vendor/bootstrap/css/bootstrap.min.css" ReplaceContent="TRUE" />
+    <File Path="Content\js\vendor\bootstrap\css\bootstrap-theme.min.css" Url="Content/js/vendor/bootstrap/css/bootstrap-theme.min.css" ReplaceContent="TRUE" />
   </Module>
 </Elements>

@@ -48,12 +48,17 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="Content\App.css" />
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\App.css" />
     <Content Include="Content\Elements.xml" />
+    <Content Include="Content\js\vendor\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Content\js\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\js\vendor\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\js\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\js\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\js\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\js\vendor\jquery\jquery.min.js" />
+    <Content Include="Content\js\vendor\knockout\knockout.js" />
+    <Content Include="Content\js\vendor\knockout\knockout.validation.min.js" />
     <Content Include="Elements.xml" />
     <Content Include="Features\MentorAppComponents\MentorAppComponents.Template.xml">
       <DependentUpon>MentorAppComponents.feature</DependentUpon>
@@ -70,17 +75,15 @@
     <Content Include="Features\MentorAppListMentor\MentorAppListMentor.Template.xml">
       <DependentUpon>MentorAppListMentor.feature</DependentUpon>
     </Content>
-    <Content Include="Fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Fonts\Elements.xml" />
-    <Content Include="Images\AppIcon.png">
+    <Content Include="Content\images\AppIcon.png">
       <OpcRelationship>manifest-icon</OpcRelationship>
     </Content>
-    <Content Include="Images\becomeamentee.jpg" />
-    <Content Include="Images\becomementor.jpg" />
-    <Content Include="Images\Createrelationship.jpg" />
-    <Content Include="Images\Elements.xml" />
-    <Content Include="Images\SearchMentee.jpg" />
-    <Content Include="Images\SearchMentor.jpg" />
+    <Content Include="Content\images\becomeamentee.jpg" />
+    <Content Include="Content\images\becomementor.jpg" />
+    <Content Include="Content\images\Createrelationship.jpg" />
+    <Content Include="Content\images\SearchMentee.jpg" />
+    <Content Include="Content\images\SearchMentor.jpg" />
+    <Content Include="gulpfile.js" />
     <Content Include="Lists\Career\Elements.xml" />
     <Content Include="Lists\Career\Schema.xml" />
     <Content Include="Lists\Career\yCareersInstance\Elements.xml" />
@@ -99,21 +102,8 @@
     <Content Include="Pages\BecomeAMentor.aspx" />
     <Content Include="Pages\Default.aspx" />
     <Content Include="Pages\Elements.xml" />
-    <Content Include="Scripts\App-BecomeAMentor.js" />
-    <Content Include="Scripts\App.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\Elements.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Scripts\jquery-1.12.0.intellisense.js" />
-    <Content Include="Scripts\jquery-1.12.0.js" />
-    <Content Include="Scripts\jquery-1.12.0.min.js" />
-    <Content Include="Scripts\knockout-3.4.0.debug.js" />
-    <Content Include="Scripts\knockout-3.4.0.js" />
-    <Content Include="Scripts\knockout.validation.js" />
-    <Content Include="Scripts\knockout.validation.min.js" />
-    <Content Include="Scripts\_references.js" />
+    <Content Include="Content\js\mentor\App-BecomeAMentor.js" />
+    <Content Include="Content\js\App.js" />
   </ItemGroup>
   <ItemGroup>
     <AppManifestFile Include="AppManifest.xml">
@@ -133,10 +123,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Content\bootstrap-theme.css.map" />
-    <None Include="Content\bootstrap-theme.min.css.map" />
-    <None Include="Content\bootstrap.css.map" />
-    <None Include="Content\bootstrap.min.css.map" />
+    <None Include="Content\js\vendor\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Content\js\vendor\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Content\js\vendor\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Content\js\vendor\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Content\js\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <None Include="Content\js\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <None Include="Content\js\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <None Include="Content\js\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <None Include="Content\js\vendor\font-awesome\fonts\FontAwesome.otf" />
     <None Include="Content\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{3e00c7c8-b1c8-46e5-ac40-2ed57746f643}</SharePointProjectItemId>
     </None>
@@ -154,16 +149,6 @@
     </None>
     <None Include="Features\MentorAppListMentor\MentorAppListMentor.feature">
       <FeatureId>{94fa7b96-9dac-4265-94bb-3f36a378b09e}</FeatureId>
-    </None>
-    <None Include="Fonts\glyphicons-halflings-regular.eot" />
-    <None Include="Fonts\glyphicons-halflings-regular.ttf" />
-    <None Include="Fonts\glyphicons-halflings-regular.woff" />
-    <None Include="Fonts\glyphicons-halflings-regular.woff2" />
-    <None Include="Fonts\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{8d014fd7-886e-43cb-8e9c-7ea4ac383b30}</SharePointProjectItemId>
-    </None>
-    <None Include="Images\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{248a6eb1-a9de-4226-b71f-689f8d6ea200}</SharePointProjectItemId>
     </None>
     <None Include="Lists\Career\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{a37272cd-ebdd-49de-a659-a425787778b6}</SharePointProjectItemId>
@@ -189,21 +174,22 @@
     <None Include="Lists\Mentor\yMentorInstance\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{090f0950-8636-4e11-8054-3d994167394e}</SharePointProjectItemId>
     </None>
-    <None Include="packages.config" />
     <None Include="Package\Package.package">
       <PackageId>{c7823ec8-547d-499e-8ed7-65781c9ef048}</PackageId>
     </None>
     <None Include="Pages\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{6ce5b217-d22b-4df1-9e0c-8fad57ced5b2}</SharePointProjectItemId>
     </None>
-    <None Include="Scripts\jquery-1.12.0.min.map" />
-    <None Include="Scripts\knockout.validation.min.js.map" />
-    <None Include="Scripts\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{1f8b834e-fdf6-4672-8066-54e8dd715d4c}</SharePointProjectItemId>
-    </None>
     <None Include="SharePointProjectItem.spdata">
       <SharePointProjectItemId>{1d3c8df4-47b6-47e9-8c38-ab4cbf33d5cd}</SharePointProjectItemId>
     </None>
+    <None Include="package.json" />
+    <None Include="bower.json" />
+    <None Include="tsconfig.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\js\vendor_static\" />
+    <Folder Include="src\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

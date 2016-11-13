@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <Module Name="RootModule">
+    <File Path="package.json" Url="package.json" ReplaceContent="TRUE" />
+    <File Path="bower.json" Url="bower.json" ReplaceContent="TRUE" />
+    <File Path="tsconfig.json" Url="tsconfig.json" ReplaceContent="TRUE" />
+    <File Path="gulpfile.js" Url="gulpfile.js" ReplaceContent="TRUE" />
   </Module>
 </Elements>

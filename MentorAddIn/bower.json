@@ -1,0 +1,11 @@
+{
+	"name": "asp.net",
+	"private": true,
+  "dependencies": {
+    "knockout": "3.4.1",
+    "jquery": "1.12.4",
+    "bootstrap": "3.3.7",
+    "knockout-validation": "2.0.3",
+    "font-awesome": "4.7.0"
+  }
+}

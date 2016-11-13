@@ -8,18 +8,18 @@
 
 <%-- The markup and script in the following Content element will be placed in the <head> of the page --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderAdditionalPageHead" runat="server">
-    <script type="text/javascript" src="../Scripts/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="../content/js/vendor/jquery/jquery.min.js"></script>
     <SharePoint:ScriptLink Name="sp.js" runat="server" OnDemand="true" LoadAfterUI="true" Localizable="false" />
     <meta name="WebPartPageExpansion" content="full" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
     <!-- Add your CSS styles to the following file -->
-    <link rel="Stylesheet" type="text/css" href="../Content/bootstrap.css" />
-    <link rel="Stylesheet" type="text/css" href="../Content/App.css" />
+    <link rel="Stylesheet" type="text/css" href="../Content/js/vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="Stylesheet" type="text/css" href="../Content/css/App.css" />
 
     <!-- Add your JavaScript to the following file -->
-    <script type="text/javascript" src="../Scripts/bootstrap.js"></script>
-    <script type="text/javascript" src="../Scripts/App.js"></script>
+    <script type="text/javascript" src="../Content/js/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../Content/js/App.js"></script>
 </asp:Content>
 
 <%-- The markup in the following Content element will be placed in the TitleArea of the page --%>
@@ -55,24 +55,24 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <asp:HyperLink runat="server" NavigateUrl="JavaScript:window.location = _spPageContextInfo.webAbsoluteUrl + '/Pages/BecomeAMentor.aspx';" Text="Become a Mentor">
-                                    <img src="../Images/becomementor.jpg" />
+                                    <img src="../content/images/becomementor.jpg" />
                                 </asp:HyperLink>
                             </div>
                             <div class="col-md-6">
-                                <img src="../Images/SearchMentee.jpg" />
+                                <img src="../content/images/SearchMentee.jpg" />
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <img src="../Images/becomeamentee.jpg" />
+                                <img src="../content/images/becomeamentee.jpg" />
                             </div>
                             <div class="col-md-6">
-                                <img src="../Images/SearchMentor.jpg" />
+                                <img src="../content/images/SearchMentor.jpg" />
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <img src="../Images/Createrelationship.jpg" />
+                        <img src="../content/images/Createrelationship.jpg" />
                     </div>
                 </div>
             </div>

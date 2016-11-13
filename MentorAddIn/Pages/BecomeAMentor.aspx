@@ -7,18 +7,18 @@
 <asp:Content ContentPlaceHolderID="PlaceHolderAdditionalPageHead" runat="server">
     <meta name="WebPartPageExpansion" content="full" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <script type="text/javascript" src="../Scripts/jquery-1.12.0.min.js"></script>
-    <script type="text/javascript" src="../Scripts/bootstrap.js"></script>
-    <script type="text/javascript" src="../Scripts/knockout-3.4.0.js"></script>
-    <script type="text/javascript" src="../Scripts/knockout.validation.js"></script>
+    <script type="text/javascript" src="../content/js/vendor/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../content/js/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../content/js/vendor/knockout/knockout.js"></script>
+    <script type="text/javascript" src="../content/js/vendor/knockout/knockout.validation.min.js"></script>
 
     <!-- Add your CSS styles to the following file -->
-    <link rel="Stylesheet" type="text/css" href="../Content/bootstrap.css" />
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="Stylesheet" type="text/css" href="../Content/App.css" />
+    <link rel="Stylesheet" type="text/css" href="../Content/js/vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../content/js/vendor/font-awesome/css/font-awesome.min.css"/>
+    <link rel="Stylesheet" type="text/css" href="../Content/css/App.css" />
 
     <!-- Add your JavaScript to the following file -->
-    <script type="text/javascript" src="../Scripts/App-BecomeAMentor.js"></script>
+    <script type="text/javascript" src="../content/js/mentor/App-BecomeAMentor.js"></script>
 </asp:Content>
 
 

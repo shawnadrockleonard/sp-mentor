@@ -5,5 +5,6 @@
     <File Path="bower.json" Url="bower.json" ReplaceContent="TRUE" />
     <File Path="tsconfig.json" Url="tsconfig.json" ReplaceContent="TRUE" />
     <File Path="gulpfile.js" Url="gulpfile.js" ReplaceContent="TRUE" />
+    <File Path="src\App.ts" Url="src/App.ts" ReplaceContent="TRUE" />
   </Module>
 </Elements>

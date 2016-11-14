@@ -6,5 +6,6 @@
     <ProjectItemFile Source="bower.json" Type="ElementFile" />
     <ProjectItemFile Source="tsconfig.json" Type="ElementFile" />
     <ProjectItemFile Source="gulpfile.js" Type="ElementFile" />
+    <ProjectItemFile Source="src\App.ts" Target="src\" Type="ElementFile" />
   </Files>
 </ProjectItem>

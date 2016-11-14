@@ -255,5 +255,6 @@ paket-files/
 bower_components/
 node_modules/
 packages/
-*app.config
-*web.config
+*/web.config
+*/src/*.js*
+!**/Views/*

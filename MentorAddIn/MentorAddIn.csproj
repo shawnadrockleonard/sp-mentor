@@ -189,7 +189,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\js\vendor_static\" />
-    <Folder Include="src\" />
+    <Folder Include="src\Mentor\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="src\App.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

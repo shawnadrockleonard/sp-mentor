@@ -26,9 +26,7 @@ var paths = {
        { src: 'knockout-mapping/build/output/*.js', dest: 'knockout/' },
        { src: 'modernizer/modernizr.js', dest: 'modernizer/' },
        { src: 'moment/moment*js', dest: 'moment/' },
-       { src: 'moment/min/moment*js', dest: 'moment/' }
-    ],
-    fonts: [
+       { src: 'moment/min/moment*js', dest: 'moment/' },
        { src: 'bootstrap/dist/js/bootstrap*js', dest: 'bootstrap/js/' },
        { src: 'bootstrap/dist/css/bootstrap*css', dest: 'bootstrap/css/' },
        { src: 'bootstrap/dist/fonts/*.*', dest: 'bootstrap/fonts/' },
@@ -41,7 +39,7 @@ gulp.task('default', ['buildApp'], function () {
     return true;
 });
 
-gulp.task('buildApp', ['copy:bower:libs', 'copy:font:libs'], function (callback) {
+gulp.task('buildApp', ['copy:bower:libs'], function (callback) {
     runSequence(
         ['min:js', 'min:css', 'min:app:js'], callback);
 });
@@ -80,23 +78,6 @@ gulp.task('copy:bower:libs', function () {
         else {
             gulp.src(paths.bowerPath + vendorPkg.src)
                 .pipe(gulp.dest('./' + paths.vendorPath + vendorPkg.dest));
-        }
-    });
-});
-
-/**
- * copy npm libraries
- */
-gulp.task('copy:font:libs', function () {
-    paths.fonts.forEach(function (vendorPkg, vendorIdx) {
-        if (typeof vendorPkg.base !== typeof undefined) {
-            gulp.src(paths.bowerPath + vendorPkg.src, {
-                base: vendorPkg.base + paths.bowerPath
-            }).pipe(gulp.dest(paths.vendorPath + vendorPkg.dest));
-        }
-        else {
-            gulp.src(paths.bowerPath + vendorPkg.src)
-                .pipe(gulp.dest(paths.vendorPath + vendorPkg.dest));
         }
     });
 });

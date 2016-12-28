@@ -41,13 +41,7 @@ var mentor;
                 jQuery('body').show();
             });
         }
-        //Load the SP.UI.Controls.js file to render the App Chrome
-        jQuery.getScript(layoutsRoot + 'SP.UI.Controls.js', function () {
-            RenderSPChrome(executor);
-        })
-            .fail(function (jqXHR, textStatus, errorThrown) {
-            console.log('Failed to load UI.Controls ' + textStatus);
-        });
+        RenderSPChrome(executor);
     });
 })(mentor || (mentor = {}));
 //# sourceMappingURL=App.js.map

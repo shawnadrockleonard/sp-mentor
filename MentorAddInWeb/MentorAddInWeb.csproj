@@ -32,7 +32,7 @@
     </NuGetPackageImportStamp>
     <TargetOfficeVersion>16.1</TargetOfficeVersion>
     <TargetFrameworkProfile />
-    <TypeScriptToolsVersion>2.0</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>2.1</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -395,6 +395,12 @@
     <Content Include="Content\js\vendor\moment\moment-with-locales.min.js" />
     <Content Include="Content\js\vendor\moment\moment.js" />
     <Content Include="Content\js\vendor\moment\moment.min.js" />
+    <Content Include="Content\js\vendor_static\init.js" />
+    <Content Include="Content\js\vendor_static\SP.core.js" />
+    <Content Include="Content\js\vendor_static\SP.js" />
+    <Content Include="Content\js\vendor_static\SP.RequestExecutor.js" />
+    <Content Include="Content\js\vendor_static\SP.Runtime.js" />
+    <Content Include="Content\js\vendor_static\SP.UI.Controls.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\css\Site.css" />
